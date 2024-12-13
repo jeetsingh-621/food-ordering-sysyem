@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main {
+    width: 100%;
+    max-width: 1600px;
+    color: white;
+    margin: 0px auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 22%;
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.left::-webkit-scrollbar {
+    display: none;
+}
+
+.right {
+    width: 78%;
+    min-height: 100vh;
+    background-color: rgb(27, 26, 26);
+    padding: 5px 15px;
+    margin-left: 22%;
+}
+
+.left-header {
+    border-bottom: 1px solid rgb(90, 86, 86);
+    padding: 10px 0px 20px 0px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70%;
+    object-fit: cover;
+}
+
+.heading {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.heading h1 {
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.heading h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
+}
+
+.menu, .other-links {
+    width: 100%;
+    padding: 20px 35px;
+}
+
+.menu h2, .other-links h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.menu ol, .other-links ol {
+    font-size: 20px;
+    margin: 30px 0px;
+}
+
+.menu ol li, .other-links ol li {
+    margin: 8px 0px;
+}
+
+.menu ol li a, .other-links ol li a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-header .logo2 img {
+    width: 80px;
+}
+
+.right-header #search {
+    width: 60%;
+    padding: 10px 6px;
+    border-radius: 4px;
+    background-color: rgb(46, 45, 45);
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#signup, #login {
+    padding: 10px 50px;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+}
+
+.landing {
+    width: 100%;
+}
+
+.landing img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.item {
+    width: 32%;
+    padding: 5px;
+    height: 330px;
+    background-color: rgb(51, 51, 58);
+    border-radius: 4px;
+    margin: 15px 0px;
+}
+
+.landing-menu {
+    margin: 15px 0px;
+}
+
+.item .item-img {
+    width: 100%;
+    max-height: 250px;
+}
+
+.item .item-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.content .prize h4 {
+    font-size: 20px;
+    margin: 2px 0px;
+}
+
+.content .prize h6 {
+    margin: 4px 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.content .btn {
+    background-color: red;
+    padding: 6px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .left {
+        width: 25%;
+    }
+
+    .right {
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    .item {
+        width: 48%;
+    }
+
+    .right-header #search {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left {
+        width: 30%;
+    }
+
+    .right {
+        width: 70%;
+        margin-left: 30%;
+    }
+
+    .item {
+        width: 48%;
+    }
+
+    .right-header #search {
+        width: 40%;
+    }
+
+    .right-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-header input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .menu {
+        padding: 15px 25px;
+    }
+
+    .menu ol {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .left {
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s ease;
+    }
+
+    .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .items {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .right-header #search {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    #signup, #login {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    .landing img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .item .item-img img {
+        max-height: 200px;
+    }
+
+    /* For Mobile Menu */
+    .left.active {
+        left: 0;
+    }
+
+    .menu ol {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .left {
+        width: 100%;
+        height: auto;
+    }
+
+    .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .items {
+        justify-content: center;
+    }
+
+    .item {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .right-header #search {
+        width: 70%;
+    }
+
+    .right-header input {
+        margin: 5px 0;
+    }
+
+    .landing img {
+        height: 150px;
+        object-fit: cover;
+    }
+}
